@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <style type="text/css">
+
+path.arc {
+  cursor: move;
+  fill: #fff;
+}
+
+.node {
+  font-size: 12px;
+}
+
+.node:hover {
+  fill: #d62728;
+  .node:not(:hover){
+   opacity: 0.2
+  }
+}
+
+.link {
+  fill: none;
+  stroke: #8B8970;
+  stroke-opacity: 0.1;
+  stroke-width: 0.5px;
+  pointer-events: none;
+}
+
+.link.source, .link.target {
+  stroke-opacity: 0.7;
+  stroke-width: 0.5px;
+}
+
+.node.target, .node.source {
+  fill: #000;
+}
+
+.node.hub {
+  stroke: #780478;
+  stroke-width: 2px;
+}
+
+.link.source {
+  stroke: #d62728;
+}
+
+.link.target {
+  stroke: #d62728;
+}
+
+#vis3d {
+	background-color:#000000; 
+	width: 400px; 
+	height: 400px;
+/*	top: 300px;*/
+	left:-150px;
+}
+	</style>
+  </head>
+  <body ondblclick="emptyclick()">
+    <!-- <div style="font-size:25px;position: absolute;left:-100px;">Fusion of Brain Network</br>and ROI Weights</div>
+    <div style="font-size:18px;position:absolute;top:150px;left:-100px; z-index:1000">tension: <input id="tensionInput" style="position:relative;top:3px;" type="range" min="0" max="100" value="85" oninput="tension.value=tensionInput.value">
+<output id="tension" for="tensionInput">85</output>
+</div>
+
+<div style="font-size:18px;position:absolute;top:200px; left:-100px; z-index:1000">degree: <input id="degreeInput" style="position:relative;top:3px;" type="range" min="0" max="100" value="100" oninput="degree.value=degreeInput.value">
+<output id="degree" for="degreeInput"></output> 
+
+</div> -->
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="d3.layout.js"></script>
+	<script type="text/javascript" src="network.js"></script>
+
+<!-- 	<script type="text/javascript" src="http://get.goXTK.com/xtk_edge.js"></script>
+	<script type="text/javascript" src="http://get.goxtk.com/xtk_xdat.gui.js"></script> -->
+	<script type="text/javascript" src="xtk_edge.js"></script>
+	<script type="text/javascript" src="xtk_xdat.gui.js"></script>
+	<!-- <script type="text/javascript" src="brainmap.js"></script> -->
+
+	
+	<div id='vis3d'></div>
+	
+  </body>
+</html>
